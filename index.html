@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        article {
+            text-align: center;
+        }
+
+        button {
+            background-color: white;
+            font-size: 22px;
+            width: 400px;
+            height: 50px;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<article>
+    <button onclick="browserCheck()">Bài 1 - Browser Name Check</button>
+    <br>
+    <button onclick="numberCheck()">Bài 2 - Switch Case 0,1,2,3</button>
+    <br>
+    <button onclick="valueCheck()">Bài 3 - Positive, negative num check</button>
+</article>
+</body>
+</html>
+
+<script>
+    function browserCheck() {
+        let browser = prompt("Enter browser name!")
+        switch (browser) {
+            case "Edge":
+                alert("You've got the Edge!");
+                break;
+            case "Chrome":
+            case "Firefox":
+            case "Safari":
+            case "Opera":
+                alert('Okay we support these browsers too');
+                break;
+            default:
+                alert('We hope that this page looks ok!');
+        }
+    }
+
+    // if (browser == 'Edge') {
+    //     alert("You've got the Edge!");
+    // } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+    //     alert('Okay we support these browsers too');
+    // } else {
+    //     alert('We hope that this page looks ok!');
+    // }
+
+    function numberCheck() {
+        let a = +prompt('a?', '');
+        switch (a) {
+            case 0:
+                alert(0);
+                break;
+            case 1:
+                alert(1);
+                break
+            case 2:
+            case 3:
+                alert('2,3');
+        }
+    }
+
+    //
+    // if (a == 0) {
+    //     alert(0);
+    // }
+    // if (a == 1) {
+    //     alert(1);
+    // }
+    // if (a == 2 || a == 3) {
+    //     alert('2,3');
+    // }
+
+    function valueCheck() {
+        let num = +prompt("Nhập số", "0");
+        if (num > 0) {
+            alert("1");
+        } else if (num < 0) {
+            alert("-1");
+        } else {
+            alert("0");
+        }
+    }
+
+</script>
